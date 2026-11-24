@@ -11,8 +11,40 @@ to any API.
 
 ---
 
+## Screenshots
+
+Captured at 1440 × 900 from a **seeded demo profile** (nine sessions across two weeks),
+so every chart, streak and progress value below is genuine app output.
+
+| Gamified dashboard | Progress & technique trends |
+| --- | --- |
+| [![Dashboard with daily goal ring, game modes and adventure card](docs/screenshots/dashboard.webp)](docs/screenshots/dashboard.webp) | [![Progress page with XP chart, technique trend and personal records](docs/screenshots/progress.webp)](docs/screenshots/progress.webp) |
+| Daily XP ring, streak, four game modes and quick-start cards. | XP per day, eight-week technique trend, records and history. |
+
+| Exercise library | Exercise detail & technique guide |
+| --- | --- |
+| [![Exercise library filtered by difficulty and focus](docs/screenshots/exercises.webp)](docs/screenshots/exercises.webp) | [![Bodyweight squat detail page with animated demonstration](docs/screenshots/exercise-detail.webp)](docs/screenshots/exercise-detail.webp) |
+| All 18 movements, searchable and filterable by difficulty and focus. | Animated demo, instructions, common mistakes and safety notes. |
+
+| Workout planner | Fitness adventure |
+| --- | --- |
+| [![Workout planner with generated session and weekly schedule](docs/screenshots/planner.webp)](docs/screenshots/planner.webp) | [![Adventure map with levels, stars and unlock requirements](docs/screenshots/adventure.webp)](docs/screenshots/adventure.webp) |
+| Difficulty, duration, focus, impact and training days → full session. | Eight levels with star ratings, level gating and clear bonuses. |
+
+| Achievements | Session preview |
+| --- | --- |
+| [![Achievement cabinet with unlocked badges](docs/screenshots/achievements.webp)](docs/screenshots/achievements.webp) | [![Workout intro listing intervals, targets and safety checklist](docs/screenshots/workout-intro.webp)](docs/screenshots/workout-intro.webp) |
+| 25 badges for streaks, volume, technique and exploration. | Warm-up → tracked intervals → cool-down, before the camera starts. |
+
+> The live tracking HUD is intentionally **not** screenshotted: it renders your webcam
+> feed, so publishing it would leak the operator's room. Run `npm run dev` and start a
+> session to see the mirrored video, skeleton overlay, rep counter and coaching cues.
+
+---
+
 ## Table of contents
 
+- [Screenshots](#screenshots)
 - [What actually works](#what-actually-works)
 - [Requirements](#requirements)
 - [Install and run on macOS](#install-and-run-on-macos)
@@ -242,6 +274,9 @@ src/
   components/     PoseStage, DemoPlayer, HUD, charts, UI primitives, shell
   pages/          dashboard, library, detail, adventure, planner, progress, awards, settings
 tests/            unit + integration suites and the synthetic pose harness
+docs/
+  EXERCISE_TRACKING.md   tracking algorithms, thresholds, how to add an exercise
+  screenshots/           README images (WebP, captured with a demo profile)
 ```
 
 Design rules:
